@@ -6,11 +6,65 @@
     <title>Muh. Aidil Ilham - CV</title>
     <link rel="stylesheet" href="style-cv.css">
     <script defer src="script-cv.js"></script>
+    <style>
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #FFD600;
+            margin: 3px 0;
+            border-radius: 3px;
+        }
+        @media screen and (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+                padding: 10px 20px;
+                height: auto;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin-top: 15px;
+                width: 100%;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            .profile-full {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-text {
+                margin-top: 15px;
+            }
+            .skills-list {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <span class="nav-logo">CV Muh. Aidil Ilham</span>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#info">Informasi</a></li>
                 <li><a href="#education">Pendidikan</a></li>
@@ -24,7 +78,7 @@
     <div class="container-full">
         <header class="header-full">
             <div class="profile-full">
-                <img src="assets/fotocv.png" alt="Foto Profil" style="size: 150px; height: 150px; border-radius: 50%;">
+                <img src="assets/fotocv.png" alt="Foto Profil" style="width: 150px; height: 150px; border-radius: 50%;">
                 <div class="profile-text">
                     <h1>Muh. Aidil Ilham</h1>
                     <p>Mahasiswa Program Studi Teknologi Rekayasa Perangkat Lunak</p>
